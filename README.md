@@ -1,12 +1,14 @@
 # Домашнее задание к занятию «Disaster Recovery. FHRP и Keepalived»
 # Задание 1
 Не смог сделать, так как не смог зайти на УЗ cisco в cisco пакет трейсер, впн не помогает, возможно провайдер блочит
-Сделал бы примерно так
+Сделал бы примерно так:
+```
 track 2 interface GigabitEthernet0/0 line-protocol
 interface GigabitEthernet0/0
  standby 1 ip <HSRP-IP>
  standby 1 priority <значение приоритета>
  standby 1 preempt
+```
  # Задание 2
 # Bash
 ```
