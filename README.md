@@ -9,7 +9,7 @@ interface GigabitEthernet0/0
  standby 1 preempt
  # Задание 2
 # Bash
-`
+```
 #!/bin/bash
 
 PORT=80
@@ -28,9 +28,9 @@ if [ $PORT_STATUS -ne 0 ] || [ $FILE_STATUS -ne 0 ]; then
 else
     exit 0
 fi
-`
+```
 # конфигурационный файл keepalived
-
+```
 vrrp_script check_webserver {
     script "/usr/local/bin/check_webserver.sh"
     interval 3
@@ -57,4 +57,5 @@ vrrp_instance VI_1 {
         check_webserver
     }
 }
+```
 ![image](https://github.com/user-attachments/assets/47b172db-6e0d-4389-b669-cabae587c4af)
