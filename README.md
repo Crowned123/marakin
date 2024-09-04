@@ -9,7 +9,8 @@ interface GigabitEthernet0/0
  standby 1 preempt
  # Задание 2
 # Bash
-{ #!/bin/bash
+{ 
+#!/bin/bash
 
 PORT=80
 URL="http://localhost:$PORT/index.html"
