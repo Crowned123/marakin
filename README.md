@@ -29,6 +29,7 @@ else
 fi
 
 # конфигурационный файл keepalived
+
 vrrp_script check_webserver {
     script "/usr/local/bin/check_webserver.sh"
     interval 3
