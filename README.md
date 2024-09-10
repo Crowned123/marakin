@@ -1,4 +1,4 @@
-# Домашнее задание к занятию «Disaster Recovery. FHRP и Keepalived»
+# Домашнее задание "Резервное копирование"
 # Задание 1
 ![image](https://github.com/user-attachments/assets/ef3d5d01-5ee5-44aa-8edd-c4fb1bc285e7)
 
