@@ -1,30 +1,28 @@
 # Домашнее задание "Резервное копирование"
 # Задание 1
-![image](https://github.com/user-attachments/assets/ef3d5d01-5ee5-44aa-8edd-c4fb1bc285e7)
+```
+ELECT DISTINCT district_name
+FROM addresses
+WHERE district_name LIKE 'K%a'
+  AND district_name NOT LIKE '% %';
+
+```
 
 # Задание 2
 ```
-#!/bin/bash
-
-# Директория для резервного копирования
-BACKUP_DIR="/tmp/backup"
-
-# Исходная директория (домашняя директория пользователя)
-SOURCE_DIR="$HOME/"
-
-# Лог-файл для записи результатов
-LOGFILE="/var/log/backup.log"
-
-# Выполнение резервного копирования с использованием rsync
-rsync -a --delete --checksum --exclude='.*' "$SOURCE_DIR" "$BACKUP_DIR" >> "$LOGFILE" 2>&1
-
-# Проверка статуса завершения команды rsync
-if [ $? -eq 0 ]; then
-    echo "$(date): Backup completed successfully" >> "$LOGFILE"
-else
-    echo "$(date): Backup failed" >> "$LOGFILE"
-fi
+SELECT * FROM payments WHERE payment_date BETWEEN '2005-06-15' AND '2005-06-18' AND amount > 10.00;
 ```
-![image](https://github.com/user-attachments/assets/40d6904c-a842-4a3a-8949-311c9ee2b967)
 
+# Задание 3
+```
+SELECT * FROM rentals ORDER BY rental_date DESC LIMIT 5;
+```
+# Задание 4
+```
+SELECT LOWER(REPLACE(first_name, 'LL', 'pp')) AS modified_first_name,
+       LOWER(last_name) AS modified_last_name
+FROM customers
+WHERE status = 'active'
+  AND (first_name = 'Kelly' OR first_name = 'Willie');
 
+```
