@@ -39,6 +39,24 @@ FROM monthly_payments mp
 JOIN rentals r ON DATE_TRUNC('month', r.rental_date) = mp.month
 WHERE mp.total_payments = (SELECT MAX(total_payments) FROM monthly_payments)
 GROUP BY mp.month, mp.total_payments;
+
+
+Исправил:
+WITH monthly_payments AS (
+    SELECT 
+        DATE_FORMAT(payment_date, '%Y-%m') AS month,
+        SUM(amount) AS total_payments
+    FROM payments
+    GROUP BY month
+)
+SELECT 
+    mp.month AS "Месяц",
+    mp.total_payments AS "Наибольшая сумма платежей",
+    COUNT(r.rental_id) AS "Количество аренд"
+FROM monthly_payments mp
+JOIN rentals r ON DATE_FORMAT(r.rental_date, '%Y-%m') = mp.month
+WHERE mp.total_payments = (SELECT MAX(total_payments) FROM monthly_payments)
+GROUP BY mp.month, mp.total_payments;
 ```
 
 
