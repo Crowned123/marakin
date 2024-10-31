@@ -1,29 +1,44 @@
 # Маракин Э.Ю
-# Домашнее задание к занятию «SQL. Часть 1»
+# Домашнее задание к занятию «SQL. Часть 2»
 # Задание 1
 ```
-ELECT DISTINCT district_name
-FROM addresses
-WHERE district_name LIKE 'K%a'
-  AND district_name NOT LIKE '% %';
+SELECT 
+    e.last_name AS "Фамилия сотрудника", 
+    e.first_name AS "Имя сотрудника",
+    s.city AS "Город магазина",
+    COUNT(c.customer_id) AS "Количество пользователей"
+FROM employees e
+JOIN stores s ON e.store_id = s.store_id
+JOIN customers c ON s.store_id = c.store_id
+GROUP BY e.employee_id, e.last_name, e.first_name, s.city
+HAVING COUNT(c.customer_id) > 300;
 
 ```
 
 # Задание 2
 ```
-SELECT * FROM payments WHERE payment_date BETWEEN '2005-06-15' AND '2005-06-18' AND amount > 10.00;
+SELECT COUNT(*) AS "Количество фильмов"
+FROM movies
+WHERE duration > (SELECT AVG(duration) FROM movies);
 ```
 
 # Задание 3
 ```
-SELECT * FROM rentals ORDER BY rental_date DESC LIMIT 5;
+WITH monthly_payments AS (
+    SELECT 
+        DATE_TRUNC('month', payment_date) AS month,
+        SUM(amount) AS total_payments
+    FROM payments
+    GROUP BY month
+)
+SELECT 
+    mp.month AS "Месяц",
+    mp.total_payments AS "Наибольшая сумма платежей",
+    COUNT(r.rental_id) AS "Количество аренд"
+FROM monthly_payments mp
+JOIN rentals r ON DATE_TRUNC('month', r.rental_date) = mp.month
+WHERE mp.total_payments = (SELECT MAX(total_payments) FROM monthly_payments)
+GROUP BY mp.month, mp.total_payments;
 ```
-# Задание 4
-```
-SELECT LOWER(REPLACE(first_name, 'LL', 'pp')) AS modified_first_name,
-       LOWER(last_name) AS modified_last_name
-FROM customers
-WHERE status = 'active'
-  AND (first_name = 'Kelly' OR first_name = 'Willie');
 
-```
+
