@@ -1,62 +1,33 @@
 # Маракин Э.Ю
-# Домашнее задание к занятию «SQL. Часть 2»
+# Домашнее задание к занятию «Индексы»
 # Задание 1
 ```
 SELECT 
-    e.last_name AS "Фамилия сотрудника", 
-    e.first_name AS "Имя сотрудника",
-    s.city AS "Город магазина",
-    COUNT(c.customer_id) AS "Количество пользователей"
-FROM employees e
-JOIN stores s ON e.store_id = s.store_id
-JOIN customers c ON s.store_id = c.store_id
-GROUP BY e.employee_id, e.last_name, e.first_name, s.city
-HAVING COUNT(c.customer_id) > 300;
+    (SUM(pg_indexes_size(relid))::NUMERIC / SUM(pg_total_relation_size(relid)) * 100) AS index_to_table_size_ratio
+FROM 
+    pg_catalog.pg_statio_user_tables;
 
 ```
 
 # Задание 2
 ```
-SELECT COUNT(*) AS "Количество фильмов"
-FROM movies
-WHERE duration > (SELECT AVG(duration) FROM movies);
-```
+Синтаксис FROM: Использование устаревшего синтаксиса с запятыми для соединений усложняет чтение и поддержку кода. Рекомендуется использовать явный JOIN
+Функция DATE() в WHERE-условии может препятствовать использованию индексов
+Отсутствие ограничений по film: В запросе не указано условие для соединения таблицы film.
 
-# Задание 3
-```
-WITH monthly_payments AS (
-    SELECT 
-        DATE_TRUNC('month', payment_date) AS month,
-        SUM(amount) AS total_payments
-    FROM payments
-    GROUP BY month
-)
-SELECT 
-    mp.month AS "Месяц",
-    mp.total_payments AS "Наибольшая сумма платежей",
-    COUNT(r.rental_id) AS "Количество аренд"
-FROM monthly_payments mp
-JOIN rentals r ON DATE_TRUNC('month', r.rental_date) = mp.month
-WHERE mp.total_payments = (SELECT MAX(total_payments) FROM monthly_payments)
-GROUP BY mp.month, mp.total_payments;
+Оптимизированный запрос:
+SELECT DISTINCT 
+    CONCAT(c.last_name, ' ', c.first_name) AS customer_name, 
+    SUM(p.amount) OVER (PARTITION BY c.customer_id, f.title) AS total_amount
+FROM 
+    payment p
+JOIN rental r ON p.payment_date = r.rental_date
+JOIN customer c ON r.customer_id = c.customer_id
+JOIN inventory i ON i.inventory_id = r.inventory_id
+JOIN film f ON i.film_id = f.film_id
+WHERE 
+    p.payment_date >= '2005-07-30' AND p.payment_date < '2005-07-31';
 
-
-Исправил:
-WITH monthly_payments AS (
-    SELECT 
-        DATE_FORMAT(payment_date, '%Y-%m') AS month,
-        SUM(amount) AS total_payments
-    FROM payments
-    GROUP BY month
-)
-SELECT 
-    mp.month AS "Месяц",
-    mp.total_payments AS "Наибольшая сумма платежей",
-    COUNT(r.rental_id) AS "Количество аренд"
-FROM monthly_payments mp
-JOIN rentals r ON DATE_FORMAT(r.rental_date, '%Y-%m') = mp.month
-WHERE mp.total_payments = (SELECT MAX(total_payments) FROM monthly_payments)
-GROUP BY mp.month, mp.total_payments;
 ```
 
 
