@@ -27,6 +27,8 @@ https://www.exploit-db.com/exploits/51447
 ```
 
 # Задание 2
+
+Файл дамиа WireShark - https://disk.yandex.ru/d/zUus2VT63LIK1A
 ```
 
 
