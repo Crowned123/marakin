@@ -1,0 +1,16 @@
+[web_servers]
+web-1 ansible_host=web-1.ru-central1.internal  ansible_ssh_private_key_file=/home/marakin/.ssh/id_ed25519 ansible_user=marakin ansible_python_interpreter=/usr/bin/python3
+web-2 ansible_host=web-2.ru-central1.internal  ansible_ssh_private_key_file=/home/marakin/.ssh/id_ed25519 ansible_user=marakin ansible_python_interpreter=/usr/bin/python3
+
+[zabbix]
+zabbix ansible_host=zabbix.ru-central1.internal  ansible_ssh_private_key_file=/home/marakin/.ssh/id_ed25519 ansible_user=marakin ansible_python_interpreter=/usr/bin/python3
+
+
+[elasticsearch]
+elasticsearch ansible_host=elasticsearch.ru-central1.internal  ansible_ssh_private_key_file=/home/marakin/.ssh/id_ed25519 ansible_user=marakin ansible_python_interpreter=/usr/bin/python3
+
+[kibana]
+kibana ansible_host=kibana.ru-central1.internal  ansible_ssh_private_key_file=/home/marakin/.ssh/id_ed25519 ansible_user=marakin ansible_python_interpreter=/usr/bin/python3
+
+[bastion]
+bastion  ansible_host=bastion.ru-central1.interna ansible_ssh_user=marakin
