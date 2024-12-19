@@ -11,11 +11,13 @@
 ![image](https://github.com/user-attachments/assets/6d4ac7a0-4425-4314-827e-2bdad79838ef)
 Протестируйте сайт curl -v <публичный IP балансера>:80
 ![image](https://github.com/user-attachments/assets/bcac9248-ae13-476d-9059-532e91f1d932)
+![image](https://github.com/user-attachments/assets/3b1ff8ad-98db-47fe-9e3b-1f175763501e)
+
 
 # Сеть
-![image](https://github.com/user-attachments/assets/2d9cc421-bd70-4559-8fa7-4287373abd57)
-![image](https://github.com/user-attachments/assets/5abcec27-1e91-4a42-9d3c-a90ced6de349)
-
+![image](https://github.com/user-attachments/assets/6963b57a-21d7-420f-90a6-ef0cfcd0c0b3)
+![image](https://github.com/user-attachments/assets/9e83ac0b-d770-4426-b910-85744dfd05a0)
+![image](https://github.com/user-attachments/assets/cd23a20b-758d-40e2-bb63-37b3d35199fc)
 ![image](https://github.com/user-attachments/assets/e964fc0b-1d6f-4cfd-9c4e-c58629200b02)
 
 
