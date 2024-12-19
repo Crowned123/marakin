@@ -19,6 +19,12 @@
 ![image](https://github.com/user-attachments/assets/9e83ac0b-d770-4426-b910-85744dfd05a0)
 ![image](https://github.com/user-attachments/assets/cd23a20b-758d-40e2-bb63-37b3d35199fc)
 ![image](https://github.com/user-attachments/assets/e964fc0b-1d6f-4cfd-9c4e-c58629200b02)
+![image](https://github.com/user-attachments/assets/1a18eef2-b9d8-4ed3-a760-59488fe3195d)
+![image](https://github.com/user-attachments/assets/e6a06189-3e12-4d58-8471-6380115a2f61)
+![image](https://github.com/user-attachments/assets/476f88ed-da39-4a34-a7e5-3a1a093e04ba)
+![image](https://github.com/user-attachments/assets/cc2fb37c-ff1b-4310-8adf-28c43ac49b4d)
+![image](https://github.com/user-attachments/assets/5a6078db-7be9-468b-851f-1045ae1d35c1)
+![image](https://github.com/user-attachments/assets/cdbadb74-7c54-4a8c-81c7-7065b43a3a40)
 
 
 # Мониторинг
