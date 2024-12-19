@@ -1,6 +1,6 @@
 # Маракин Э.Ю
 # Дипломная работа по профессии «Системный администратор»
-#Сайт
+# Сайт
 Создайте Target Group, включите в неё две созданных ВМ.
 ![image](https://github.com/user-attachments/assets/6afcdba1-b99d-4a89-bcae-4e90258f3fdd)
 Создайте Backend Group, настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
