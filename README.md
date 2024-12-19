@@ -24,6 +24,7 @@
 # Мониторинг
 
 # Логи
+echo "deb [trusted=yes] https://mirror.yandex.ru/mirrors/elastic/8/ stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
 
 # Резервное копирование
 ![image](https://github.com/user-attachments/assets/89b19e62-1fac-4c24-9cee-9a5890c3202a)
