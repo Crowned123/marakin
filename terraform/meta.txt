@@ -1,0 +1,9 @@
+#cloud-config
+
+users:
+  - name: marakin
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMcLzXHI7yIYrSUHMYgV+AND8LGjcU3EX+9Q8pb36b8h eymar@home
