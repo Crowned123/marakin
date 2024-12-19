@@ -9,7 +9,7 @@
 ![image](https://github.com/user-attachments/assets/9dd94bcb-7ff2-45f8-bd29-df860d7b540d)
 Создайте Application load balancer для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
 ![image](https://github.com/user-attachments/assets/6d4ac7a0-4425-4314-827e-2bdad79838ef)
-Протестируйте сайт curl -v <публичный IP балансера>:80
+Протестируйте сайт curl -v 84.201.145.43:80
 ![image](https://github.com/user-attachments/assets/bcac9248-ae13-476d-9059-532e91f1d932)
 ![image](https://github.com/user-attachments/assets/3b1ff8ad-98db-47fe-9e3b-1f175763501e)
 
