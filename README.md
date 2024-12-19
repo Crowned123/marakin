@@ -21,6 +21,11 @@
 ![image](https://github.com/user-attachments/assets/e964fc0b-1d6f-4cfd-9c4e-c58629200b02)
 
 
+# Мониторинг
 
+# Логи
 
+# Резервное копирование
+![image](https://github.com/user-attachments/assets/89b19e62-1fac-4c24-9cee-9a5890c3202a)
+![image](https://github.com/user-attachments/assets/2e4f4361-fd7c-438c-ba46-fb698773ece7)
 
