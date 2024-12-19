@@ -29,6 +29,9 @@
 
 # Мониторинг
 http://158.160.135.131:8080/  Admin  zabbix
+![image](https://github.com/user-attachments/assets/42e301d7-e7a7-4faf-bfc1-6473a4729f00)
+![image](https://github.com/user-attachments/assets/6776214a-a1ba-422d-bafd-855a408baf1b)
+
 # Логи
 http://158.160.130.85:5601/
 ![image](https://github.com/user-attachments/assets/c095b73d-a85f-41da-bb64-60b3b48af8cd)
