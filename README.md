@@ -25,13 +25,13 @@
 
 # Логи
 http://158.160.130.85:5601/
-access:
+```access:
   enabled: true
   var.paths: ["/var/log/nginx/access.log*"]
 
 error:
   enabled: true
-  var.paths: ["/var/log/nginx/error.log*"]
+  var.paths: ["/var/log/nginx/error.log*"]```
 ![image](https://github.com/user-attachments/assets/c095b73d-a85f-41da-bb64-60b3b48af8cd)
 
 
