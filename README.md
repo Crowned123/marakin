@@ -15,7 +15,7 @@
 # Сеть
 ![image](https://github.com/user-attachments/assets/2d9cc421-bd70-4559-8fa7-4287373abd57)
 ![image](https://github.com/user-attachments/assets/5abcec27-1e91-4a42-9d3c-a90ced6de349)
-![image](https://github.com/user-attachments/assets/6202f63a-a589-4909-b609-8fe19242e652)
+
 ![image](https://github.com/user-attachments/assets/e964fc0b-1d6f-4cfd-9c4e-c58629200b02)
 
 
