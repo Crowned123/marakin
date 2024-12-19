@@ -31,10 +31,10 @@ http://158.160.130.85:5601/
 
 error:
   enabled: true
-  var.paths: ["/var/log/nginx/error.log*"]```
+  var.paths: ["/var/log/nginx/error.log*"]
+
+```
 ![image](https://github.com/user-attachments/assets/c095b73d-a85f-41da-bb64-60b3b48af8cd)
-
-
 # Резервное копирование
 ![image](https://github.com/user-attachments/assets/89b19e62-1fac-4c24-9cee-9a5890c3202a)
 ![image](https://github.com/user-attachments/assets/2e4f4361-fd7c-438c-ba46-fb698773ece7)
